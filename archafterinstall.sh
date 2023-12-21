@@ -40,6 +40,12 @@ sudo pacman -S pacman-contrib mpv lrzip lzop compress lzip spectacle kfind gpart
 
 #install aur packages
 
+#hyprland-git
+git clone https://aur.archlinux.org/hyprland-git.git
+cd hyprland-git
+makepkg -si
+cd
+
 #visual-studio-code-bin
 git clone https://aur.archlinux.org/visual-studio-code-bin.git
 cd visual-studio-code-bin
