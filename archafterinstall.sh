@@ -4,7 +4,7 @@ sudo pacman -Syyuu
 
 sudo pacman -S archlinux-contrib archlinux-appstream-data pacman-mirrorlist
 
-sudo pacman -S gcc make autoconf aria2 automake binutils cmake gdb ninja llvm clang lldb python-pip gnome-tweaks extension-manager gnome-shell-extensions gnome-firmware libnautilus-extension nautilus-image-converter nautilus-sendto nautilus-share
+sudo pacman -S gcc make autoconf aria2 automake binutils cmake gdb ninja llvm clang lldb python-pip gnome-tweaks extension-manager gnome-shell-extensions gnome-firmware libnautilus-extension nautilus-image-converter nautilus-sendto nautilus-share gnome-terminal
 
 sudo systemctl enable bluetooth && sudo systemctl start bluetooth
 
