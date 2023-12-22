@@ -2,6 +2,8 @@
 
 sudo pacman -Syyuu
 
+sudo pacman -S gcc make cmake gdb ninja llvm clang lldb python-pip gnome-tweaks
+
 sudo systemctl enable bluetooth && sudo systemctl start bluetooth
 
 # firewall ufw
@@ -86,7 +88,7 @@ makepkg -si
 cd
 
 #wlogout
-got clone https://aur.archlinux.org/wlogout.git
+git clone https://aur.archlinux.org/wlogout.git
 cd wlogout
 makepkg -si
 cd
@@ -146,7 +148,7 @@ makepkg -si
 cd
 
 #shutter-encoder-bin
-gir clone https://aur.archlinux.org/shutter-encoder-bin.git
+git clone https://aur.archlinux.org/shutter-encoder-bin.git
 cd shutter-encoder-bin
 makepkg -si
 cd
