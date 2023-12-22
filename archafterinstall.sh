@@ -2,7 +2,9 @@
 
 sudo pacman -Syyuu
 
-sudo pacman -S gcc make cmake gdb ninja llvm clang lldb python-pip gnome-tweaks
+sudo pacman -S archlinux-contrib archlinux-appstream-data pacman-mirrorlist
+
+sudo pacman -S gcc make autoconf aria2 automake binutils cmake gdb ninja llvm clang lldb python-pip gnome-tweaks extension-manager gnome-shell-extensions gnome-firmware libnautilus-extension nautilus-image-converter nautilus-sendto nautilus-share
 
 sudo systemctl enable bluetooth && sudo systemctl start bluetooth
 
@@ -72,6 +74,30 @@ cd
 #spotify
 git clone https://aur.archlinux.org/spotify.git
 cd spotify
+makepkg -si
+cd
+
+#snapd
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -si
+cd
+
+#snapd-glib
+git clone https://aur.archlinux.org/snapd-glib.git
+cd snapd-glib
+makepkg -si
+cd
+
+#libpamac-full
+git clone https://aur.archlinux.org/libpamac-full.git
+cd libpamac-full
+makepkg -si
+cd
+
+#pamac-cli
+git clone https://aur.archlinux.org/pamac-cli.git
+cd pamac-cli
 makepkg -si
 cd
 
