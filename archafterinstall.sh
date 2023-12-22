@@ -17,34 +17,37 @@ sudo ufw allow https
 sudo ufw enable
 
 # print services
-sudo pacman -S cups bluez-cups cups-browsed cups-pdf system-config-printer print-manager ipp-usb gutenprint hplip foomatic-db foomatic-db-gutenprint-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds foomatic-db-ppds
+sudo pacman -S cups bluez-cups cups-browsed cups-pdf system-config-printer ipp-usb gutenprint hplip foomatic-db foomatic-db-gutenprint-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds foomatic-db-ppds
+#print-manager
 
 sudo systemctl enable cups && sudo systemctl start cups
 
-system-config-printer
-
 #firefox gesture mod
-echo 'MOZ_ENABLE_WAYLAND=1 firefox' | sudo tee -a /etc/environment
+#echo 'MOZ_ENABLE_WAYLAND=1 firefox' | sudo tee -a /etc/environment
 
 #other stuff
-sudo pacman -S pacman-contrib mpv lrzip lzop compress lzip spectacle kfind gparted bash-completion dnsmasq lxc neofetch libimobiledevice gvfs-gphoto2 gvfs-afc nftables libreoffice-fresh dolphin-plugins cpupower networkmanager-l2tp networkmanager-openconnect networkmanager-openvpn networkmanager-pptp networkmanager-strongswan networkmanager-vpnc network-manager-sstp ntfs-3g snapper gptfdisk micro
+sudo pacman -S pacman-contrib mpv lrzip lzop compress lzip gparted bash-completion dnsmasq lxc neofetch libimobiledevice gvfs-gphoto2 gvfs-afc nftables libreoffice-fresh cpupower networkmanager-l2tp networkmanager-openconnect networkmanager-openvpn networkmanager-pptp networkmanager-strongswan networkmanager-vpnc network-manager-sstp ntfs-3g snapper gptfdisk micro
+#spectacle
+#kfind
+#dolphin-plugins
 
 #install yay
-#git clone https://aur.archlinux.org/yay.git
-#cd yay
-#makepkg -si
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd
 
-#yay -Y --gendb
-#yay -Syu --devel
-#yay -Y --devel --save
+yay -Y --gendb
+yay -Syu --devel
+yay -Y --devel --save
 
 #install aur packages
 
 #hyprland-git
-git clone https://aur.archlinux.org/hyprland-git.git
-cd hyprland-git
-makepkg -si
-cd
+#git clone https://aur.archlinux.org/hyprland-git.git
+#cd hyprland-git
+#makepkg -si
+#cd
 
 #visual-studio-code-bin
 git clone https://aur.archlinux.org/visual-studio-code-bin.git
@@ -77,85 +80,85 @@ makepkg -si
 cd
 
 #zoom
-https://aur.archlinux.org/zoom.git
+git clone https://aur.archlinux.org/zoom.git
 cd zoom
 makepkg -si
 cd
 
 #wlogout
-https://aur.archlinux.org/wlogout.git
+got clone https://aur.archlinux.org/wlogout.git
 cd wlogout
 makepkg -si
 cd
 
 #aurutils
-https://aur.archlinux.org/aurutils.git
+git clone https://aur.archlinux.org/aurutils.git
 cd aurutils
 makepkg -si
 cd
 
 #btrfs-assistant
-https://aur.archlinux.org/btrfs-assistant.git
+git clone https://aur.archlinux.org/btrfs-assistant.git
 cd btrfs-assistant
 makepkg -si
 cd
 
 #qbittorrent-enhanced
-https://aur.archlinux.org/qbittorrent-enhanced.git
+git clone https://aur.archlinux.org/qbittorrent-enhanced.git
 cd qbittorrent-enhanced
 makepkg -si
 cd
 
 #jetbrains-toolbox
-https://aur.archlinux.org/jetbrains-toolbox.git
+git clone https://aur.archlinux.org/jetbrains-toolbox.git
 cd jetbrains-toolbox
 makepkg -si
 cd
 
 #auto-cpufreq
-https://aur.archlinux.org/auto-cpufreq.git
+git clone https://aur.archlinux.org/auto-cpufreq.git
 cd auto-cpufreq
 makepkg -si
 cd
 
 #appimagelauncher
-https://aur.archlinux.org/appimagelauncher.git
+git clone https://aur.archlinux.org/appimagelauncher.git
 cd appimagelauncher
 makepkg -si
 cd
 
 #jdk-temurin
-https://aur.archlinux.org/jdk-temurin.git
+git clone https://aur.archlinux.org/jdk-temurin.git
 cd jdk-temurin
 makepkg -si
 cd
 
 #vmware-workstation
-https://aur.archlinux.org/vmware-workstation.git
+git clone https://aur.archlinux.org/vmware-workstation.git
 cd vmware-workstation
 makepkg -si
 cd
 
 #debtap
-https://aur.archlinux.org/debtap.git
+git clone https://aur.archlinux.org/debtap.git
 cd debtap
 makepkg -si
 cd
 
 #shutter-encoder-bin
-https://aur.archlinux.org/shutter-encoder-bin.git
+gir clone https://aur.archlinux.org/shutter-encoder-bin.git
 cd shutter-encoder-bin
 makepkg -si
 cd
 
 #git-extras
-https://aur.archlinux.org/git-extras.git
+git clone https://aur.archlinux.org/git-extras.git
 cd git-extras
 makepkg -si
 cd
 
 #tradingview
-https://aur.archlinux.org/tradingview.git
+git clone https://aur.archlinux.org/tradingview.git
 cd tradingview
 makepkg -si
 cd
@@ -248,19 +251,19 @@ makepkg -si
 cd
 
 #python-ansible-toolbox
-https://aur.archlinux.org/python-ansible-toolbox.git
+git clone https://aur.archlinux.org/python-ansible-toolbox.git
 cd python-ansible-toolbox
 makepkg -si
 cd
 
-ansible-bundler 
-https://aur.archlinux.org/ansible-bundler.git
+#ansible-bundler 
+git clone https://aur.archlinux.org/ansible-bundler.git
 cd ansible-bundler
 makepkg -si
 cd
 
-ansible-aur
-https://aur.archlinux.org/ansible-aur.git
+#ansible-aur
+git clone https://aur.archlinux.org/ansible-aur.git
 cd ansible-aur
 makepkg -si
 cd
