@@ -6,6 +6,8 @@ sudo pacman -S archlinux-contrib archlinux-appstream-data pacman-mirrorlist
 
 sudo pacman -S gcc make autoconf aria2 automake binutils cmake gdb ninja llvm clang lldb python-pip gnome-tweaks extension-manager gnome-shell-extensions gnome-firmware libnautilus-extension nautilus-image-converter nautilus-sendto nautilus-share gnome-terminal
 
+sudo pacman -S dkms libxcrypt-compat
+
 sudo systemctl enable bluetooth && sudo systemctl start bluetooth
 
 # firewall ufw
@@ -158,6 +160,12 @@ cd
 #jdk-temurin
 git clone https://aur.archlinux.org/jdk-temurin.git
 cd jdk-temurin
+makepkg -si
+cd
+
+#vmware-keymaps
+git clone https://aur.archlinux.org/vmware-keymaps.git
+cd vmware-keymaps
 makepkg -si
 cd
 
