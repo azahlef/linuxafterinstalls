@@ -251,17 +251,30 @@ cd rapidminer-studio
 makepkg -si
 cd
 
-#wine-stable
-git clone https://aur.archlinux.org/wine-stable.git
-cd wine-stable
+#wine
+sudo pacman -S lib32-alsa-lib fontforge lib32-giflib lib32-gnutls lib32-gst-plugins-base-libs lib32-libcups lib32-libpulse lib32-libxcomposite lib32-libxinerama lib32-libxmu mingw-w64-gcc lib32-ocl-icd opencl-headers lib32-sdl2 lib32-v4l-utils
+
+git clone https://aur.archlinux.org/lib32-libexif.git
+cd lib32-libexif
 makepkg -si
 cd
 
+git clone https://aur.archlinux.org/lib32-libgphoto2.git
+cd lib32-libgphoto2
+makepkg -si
+cd
+
+sudo pacman -S wine wine-gecko wine-mono
+
+#git clone https://aur.archlinux.org/wine-stable.git
+#cd wine-stable
+#makepkg -si
+#cd
+
 # vmware
-sudo systemctl enable --now vmware-networks-configuration.service && sudo systemctl start vmware-networks-configuration.service
+sudo systemctl start vmware-networks-configuration.service
 sudo systemctl enable --now vmware-networks.service && sudo systemctl start vmware-networks.service
 sudo systemctl enable --now vmware-usbarbitrator.service && sudo systemctl start vmware-usbarbitrator.service
-sudo systemctl enable --now vmware-hostd.service && sudo systemctl start vmware-hostd.service
 sudo modprobe -a vmw_vmci vmmon
 
 #auto-cpufreq
@@ -285,6 +298,13 @@ git clone https://aur.archlinux.org/semaphore-bin.git
 cd semaphore-bin
 makepkg -si
 cd
+
+sudo pacman -S mysql
+sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+sudo systemctl enable mariadb && sudo systemctl start mariadb
+
+semaphore setup --config /etc/semaphore/config.json
+sudo systemctl enable --now semaphore.service && sudo systemctl start semaphore.service
 
 #python-ansible-toolbox
 git clone https://aur.archlinux.org/python-ansible-toolbox.git
